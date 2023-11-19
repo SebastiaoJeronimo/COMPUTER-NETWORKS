@@ -3,4 +3,12 @@ To run this Dockerfile and build a Docker image, follow these steps:
 Save this Dockerfile in a directory on your machine.
 Open a terminal and navigate to the directory where you saved the Dockerfile.
 Run the command docker build -t my-image . to build the Docker image. Replace my-image with the name you want to give to your Docker image.
-After the image has been built, you can run it with the command docker run -it my-image. Replace my-image with the name you gave to your Docker image.
+After the image has been built, you can run it with the command docker run -it my-image. Replace my-image with the name you gave to your Docker image.  
+
+In summary:
+
+-d is used for detached mode (background).
+--name is used to specify a custom name for the container.
+-t allocates a pseudo-TTY, and -i allows interaction with the container.
+-h sets the hostname for the container.
+These commands demonstrate the flexibility of the docker run command in configuring container behavior, such as running in detached mode, specifying a name, allocating a pseudo-TTY, enabling interactive mode, and setting the hostname.
