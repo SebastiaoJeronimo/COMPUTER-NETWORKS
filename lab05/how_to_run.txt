@@ -12,3 +12,19 @@ In summary:
 -t allocates a pseudo-TTY, and -i allows interaction with the container.
 -h sets the hostname for the container.
 These commands demonstrate the flexibility of the docker run command in configuring container behavior, such as running in detached mode, specifying a name, allocating a pseudo-TTY, enabling interactive mode, and setting the hostname.
+
+Container Listing:
+docker ps
+Lists running containers.
+docker ps -a
+Lists all containers, including those that are stopped or terminated.
+Stop and Start Containers:
+docker stop <id>
+
+Stops the given container, preserving its saved state.
+docker start <id>
+
+(Re)starts the given container from its saved state.
+Container Removal:
+docker rm -f <id>
+Removes the given container, forcefully stopping it if necessary.
