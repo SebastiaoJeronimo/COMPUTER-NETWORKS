@@ -1,0 +1,4 @@
+docker build . -t my-image
+docker images (should appear my-image)
+docker build . -t my-image
+docker images (to verify there is no images)

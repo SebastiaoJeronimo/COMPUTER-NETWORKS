@@ -1,0 +1,6 @@
+To run this Dockerfile and build a Docker image, follow these steps:
+
+Save this Dockerfile in a directory on your machine.
+Open a terminal and navigate to the directory where you saved the Dockerfile.
+Run the command docker build -t my-image . to build the Docker image. Replace my-image with the name you want to give to your Docker image.
+After the image has been built, you can run it with the command docker run -it my-image. Replace my-image with the name you gave to your Docker image.
