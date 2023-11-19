@@ -27,4 +27,20 @@ docker start <id>
 (Re)starts the given container from its saved state.
 Container Removal:
 docker rm -f <id>
-Removes the given container, forcefully stopping it if necessary.
+Removes the given container, forcefully stopping it if necessary.  
+
+Docker Container Networking:
+By default, Docker containers receive a separate networking environment with a private IP address.
+
+Communication with the external world passes through the host system, which acts as a router.
+
+Containers can communicate with each other, but isolation can be achieved by attaching containers to different Docker networks.
+
+Networking Information Retrieval:
+docker inspect <id>
+Retrieves detailed information about a specific container, including its networking details.
+Filtering Networking Information:
+The grep command is introduced as a tool to filter and isolate specific information from the output of docker inspect.
+Example:
+docker inspect <id> | grep IPAddress
+Demonstrates how to use docker inspect in combination with grep to specifically obtain the IPAddress of a container.
