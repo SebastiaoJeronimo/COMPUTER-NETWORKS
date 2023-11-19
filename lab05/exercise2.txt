@@ -1,0 +1,25 @@
+docker build . -t my-image
+docker images (check if the image is there)
+docker run -ti my-image
+
+In the container shell do "ip addr | grep inet"
+
+root@01a49990e740:/# ip addr | grep inet
+    inet 127.0.0.1/8 scope host lo
+    inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0
+
+In the host inspect the container that means
+open another terminal and do docker ps you will see something like this:
+
+seba@pcdoseba:/mnt/c/Users/sjero/OneDrive/Ambiente de Trabalho/labsRC$ docker ps
+CONTAINER ID   IMAGE      COMMAND       CREATED         STATUS         PORTS     NAMES
+eb260d952bc6   my-image   "/bin/bash"   4 minutes ago   Up 4 minutes             upbeat_volhard
+
+docker inspect eb260d952bc6 (the id of the host) | grep IPAdress you will see something like this:
+seba@pcdoseba:/mnt/c/Users/sjero/OneDrive/Ambiente de Trabalho/labsRC$ docker inspect eb260d952bc6 | grep IPAddress
+            "SecondaryIPAddresses": null,
+            "IPAddress": "172.17.0.3",
+                    "IPAddress": "172.17.0.3",
+
+Then delete the containers
+Then delete the image (you cant delete the image before the container)
